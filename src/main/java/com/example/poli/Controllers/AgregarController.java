@@ -36,21 +36,21 @@ public class AgregarController {
             String matricula = Imatricula.getText();
             Student student = new Student(nombre, apellido, matricula);
             try {
-            if (server.getBase1().getList1()!=null) {
+            if (server.getBase1().getList1().isEmpty() || server.getBase3().getList3() != null) {
                 server.getBase1().salvars(student);
                 Alert alertI = new Alert(Alert.AlertType.INFORMATION);
                 alertI.setHeaderText("Estudiante guardado en la base 1");
                 alertI.setContentText("estudiante agregado con exito");
                 alertI.showAndWait();
             }
-            if (server.getBase2().getList2()!= null) {
+            if (server.getBase2().getList2().isEmpty() || server.getBase2().getList2() != null) {
                 server.getBase2().salvars(student);
                 Alert alertI = new Alert(Alert.AlertType.INFORMATION);
                 alertI.setHeaderText("Estudiante guardado en la base 2");
                 alertI.setContentText("estudiante agregado con exito");
                 alertI.showAndWait();
             }
-            if (server.getBase3().getList3()!= null) {
+            if (server.getBase3().getList3().isEmpty() || server.getBase3().getList3() != null) {
                 server.getBase3().salvars(student);
                 Alert alertI = new Alert(Alert.AlertType.INFORMATION);
                 alertI.setHeaderText("Estudiante guardado en la base 3");
